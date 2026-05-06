@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "AquaPay Water ATM"
-  author:       "DaivalaRamu"
+  title:        "Water ATM Controller"
+  author:       "Daivala Ramu"
   discord:      ""
-  description:  "Coin-operated water dispenser FSM that accepts Rs1/2/5/10 coins and dispenses proportional water volume via valve and flow-sensor feedback"
+  description:  "Coin-based water dispensing system using FSM and flow sensor"
   language:     "Verilog"
   clock_hz:     100000
 
@@ -16,27 +16,27 @@ project:
 
 pinout:
   # Inputs
-  ui[0]: "coin_1 (Rs 1 coin insert)"
-  ui[1]: "coin_2 (Rs 2 coin insert)"
-  ui[2]: "coin_5 (Rs 5 coin insert)"
-  ui[3]: "coin_10 (Rs 10 coin insert)"
-  ui[4]: "flow_sensor (pulse per litre dispensed)"
+  ui[0]: "coin_1"
+  ui[1]: "coin_2"
+  ui[2]: "coin_5"
+  ui[3]: "coin_10"
+  ui[4]: "flow_sensor"
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: "valve_on (1=open, 0=closed)"
-  uo[1]: "liters bit 0"
-  uo[2]: "liters bit 1"
-  uo[3]: "liters bit 2"
-  uo[4]: "liters bit 3"
-  uo[5]: "liters bit 4"
-  uo[6]: "liters bit 5"
-  uo[7]: "liters bit 6"
+  uo[0]: "valve_on"
+  uo[1]: "liters_bit0"
+  uo[2]: "liters_bit1"
+  uo[3]: "liters_bit2"
+  uo[4]: "liters_bit3"
+  uo[5]: "liters_bit4"
+  uo[6]: "liters_bit5"
+  uo[7]: "liters_bit6"
 
   # Bidirectional
-  uio[0]: "liters bit 7 (output)"
+  uio[0]: "liters_bit7"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
@@ -45,5 +45,4 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-# Do not change!
 yaml_version: 6
