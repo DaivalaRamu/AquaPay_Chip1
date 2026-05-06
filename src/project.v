@@ -43,7 +43,7 @@ module tt_um_water_atm (
                 valve <= 1;
             end
 
-            // Flow counting
+            // Flow pulse = 1 litre
             if (valve && flow) begin
                 if (liters > 0)
                     liters <= liters - 1;
@@ -54,10 +54,10 @@ module tt_um_water_atm (
         end
     end
 
-    // OUTPUT MAPPING (VERY IMPORTANT)
+    // ✅ Correct output mapping (VERY IMPORTANT)
     always @(*) begin
-        uo_out[0] = valve;
-        uo_out[7:1] = liters[6:0];
+        uo_out[0] = valve;         // valve status
+        uo_out[7:1] = liters[6:0]; // liters output
     end
 
 endmodule
