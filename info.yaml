@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
-  title:        "Water ATM"
-  author:       "Teamkanyarashi"
+  title:        "AquaPay Water ATM"
+  author:       "DaivalaRamu"
   discord:      ""
-  description:  "Coin-operated water dispenser FSM: accepts Rs1/2/5/10 coins and dispenses proportional water volume via valve and flow-sensor feedback"
+  description:  "Coin-operated water dispenser FSM that accepts Rs1/2/5/10 coins and dispenses proportional water volume via valve and flow-sensor feedback"
   language:     "Verilog"
-  clock_hz:     100000      # 100 kHz
+  clock_hz:     100000
 
   tiles: "1x1"
 
@@ -14,7 +14,6 @@ project:
   source_files:
     - "project.v"
 
-# Pinout — ui_in inputs
 pinout:
   # Inputs
   ui[0]: "coin_1 (Rs 1 coin insert)"
@@ -27,17 +26,17 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "valve_on (1 = valve open, 0 = valve closed)"
-  uo[1]: "liters[0] (dispensed litre count bit 0)"
-  uo[2]: "liters[1] (dispensed litre count bit 1)"
-  uo[3]: "liters[2] (dispensed litre count bit 2)"
-  uo[4]: "liters[3] (dispensed litre count bit 3)"
-  uo[5]: "liters[4] (dispensed litre count bit 4)"
-  uo[6]: "liters[5] (dispensed litre count bit 5)"
-  uo[7]: "liters[6] (dispensed litre count bit 6)"
+  uo[0]: "valve_on (1=open, 0=closed)"
+  uo[1]: "liters bit 0"
+  uo[2]: "liters bit 1"
+  uo[3]: "liters bit 2"
+  uo[4]: "liters bit 3"
+  uo[5]: "liters bit 4"
+  uo[6]: "liters bit 5"
+  uo[7]: "liters bit 6"
 
-  # Bidirectional pins
-  uio[0]: "liters[7] (dispensed litre count bit 7, output)"
+  # Bidirectional
+  uio[0]: "liters bit 7 (output)"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
